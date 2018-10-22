@@ -9,6 +9,8 @@ $darker-green: darken($green, 10%);
 $white: #EBF5DF;
 $dark: #090C08;
 
+$shadow: 0 0 59px 12px rgba(#000, .65);
+
 // Sizes
 $max-width: 90%;
 
@@ -40,3 +42,5 @@ $max-width: 90%;
     background-position: -597px;
   }
 } */
+
+@import "slick";

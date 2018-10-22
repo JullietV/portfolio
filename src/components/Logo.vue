@@ -30,7 +30,7 @@
         height: 300px;
         background-color: $dark;
         border-radius: 50%;
-        box-shadow: 0 0 59px 12px rgba(#000, .65);
+        box-shadow: $shadow;
         display: flex;
         align-items: center;
         justify-content: center;

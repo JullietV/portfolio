@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 15/10/2018 18:41
+    Creation date: 22/10/2018 17:06
     */
 
     @font-face {
@@ -43,6 +43,8 @@
 .flaticon-arrow:before { content: "\f104"; }
 .flaticon-arrow-1:before { content: "\f105"; }
 .flaticon-close-button:before { content: "\f106"; }
+.flaticon-share:before { content: "\f107"; }
+.flaticon-paper-plane-2:before { content: "\f108"; }
     
     $font-Flaticon-play-button-inside-a-circle: "\f100";
     $font-Flaticon-magic-wand: "\f101";
@@ -51,3 +53,5 @@
     $font-Flaticon-arrow: "\f104";
     $font-Flaticon-arrow-1: "\f105";
     $font-Flaticon-close-button: "\f106";
+    $font-Flaticon-share: "\f107";
+    $font-Flaticon-paper-plane-2: "\f108";
