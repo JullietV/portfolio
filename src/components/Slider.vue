@@ -115,7 +115,7 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            height: calc(100vh - 360px);
+            height: calc(100vh - 310px);
             img {
                 height: 100%;
                 margin: auto;
@@ -131,7 +131,7 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            height: 130px !important;
+            height: 100px !important;
             img {
                 height: 100%;
                 margin: auto;

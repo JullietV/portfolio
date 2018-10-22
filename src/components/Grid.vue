@@ -671,6 +671,7 @@
                 }
 
                 .info {
+                    // font-size: 120%;
                     padding: 0 15px 15px 15px;
                     box-sizing: border-box;
                     position: relative;
