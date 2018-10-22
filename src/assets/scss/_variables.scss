@@ -1,0 +1,42 @@
+// Variables
+
+// Colors
+$purple: #5B5F97;
+$blue: #7AE7C7;
+$darker-blue: darken($blue, 10%);
+$green: #BCE784;
+$darker-green: darken($green, 10%);
+$white: #EBF5DF;
+$dark: #090C08;
+
+// Sizes
+$max-width: 90%;
+
+// Mixins
+
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color; /* The Fallback */
+  background: rgba($color, $opacity);
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+// use of keyframes mixin
+/* @include keyframes(logo-changes) {
+  100% {
+    background-position: -597px;
+  }
+} */
