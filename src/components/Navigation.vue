@@ -5,9 +5,15 @@
         </div>
         <div class="nav-links">
             <ul>
-                <li><router-link to="/about">About Me</router-link></li>
-                <li><router-link to="/portfolio">Portfolio</router-link></li>
-                <li><router-link to="/contact">Contact Me</router-link></li>
+                <li v-if="!showRoute('about')">
+                    <router-link to="/about">About Me</router-link>
+                </li>
+                <li v-if="!showRoute('portfolio')">
+                    <router-link to="/portfolio">Portfolio</router-link>
+                </li>
+                <li v-if="!showRoute('contact')">
+                    <router-link to="/contact">Contact Me</router-link>
+                </li>
             </ul>
         </div>
     </nav>
@@ -15,12 +21,18 @@
 
 <script>
     export default {
-        name: 'Navigation'
+        name: 'Navigation',
+        methods: {
+            showRoute (route) {
+                return this.$route.name === route
+            }
+        }
     }
 </script>
 
 <style lang="scss" scoped>
     @import '../assets/scss/variables';
+
     nav {
         position: fixed;
         z-index: 9999;
