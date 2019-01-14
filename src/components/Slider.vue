@@ -104,13 +104,15 @@
 </style>
 
 <style lang="scss">
+    @import "../assets/scss/variables";
+
     .slick-arrow, .slick-dots {
         display: none !important;
     }
 
     .slider-for {
         a {
-
+            outline: none;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -119,22 +121,36 @@
             img {
                 height: 100%;
                 margin: auto;
+                border-radius: 10px;
+                box-shadow: 0 0 30px rgba($dark, .2);
             }
         }
     }
 
     .slider-nav {
         margin-top: 15px;
+        .slick-current {
+            a {
+                opacity: 1;
+            }
+        }
         a {
-
+            opacity: .6;
+            outline: none;
             display: flex;
             align-items: center;
             justify-content: center;
             width: 100%;
             height: 100px !important;
+
+            &:hover {
+                opacity: 1;
+            }
+
             img {
                 height: 100%;
                 margin: auto;
+                border-radius: 10px;
             }
         }
     }
