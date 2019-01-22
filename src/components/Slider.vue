@@ -13,7 +13,7 @@
                @afterChange="handleAfterChange"
                @reInit="reInit"
                class="slider-nav" :options="slickNavOptions">
-            <a v-for="image in images" href="#"><img :src="image.src" :alt="image.title"></a>
+            <a v-for="image in images" href="#"><div class="image-nav" :style="`background-image: url(${image.src})`"></div></a>
         </slick>
     </div>
 </template>
@@ -26,12 +26,12 @@
         name: 'Slider',
         components: {Slick},
         props: {
-          images: {
-              type: Array,
-              default: function () {
-                  return []
-              }
-          }
+            images: {
+                type: Array,
+                default: function () {
+                    return []
+                }
+            }
         },
         data () {
             return {
@@ -55,10 +55,10 @@
             };
         },
         methods: {
-            handleAfterChange(event, slick, currentSlide) {
+            handleAfterChange (event, slick, currentSlide) {
                 console.log('handleAfterChange', event, slick, currentSlide);
             },
-            handleBeforeChange(event, slick, currentSlide, nextSlide) {
+            handleBeforeChange (event, slick, currentSlide, nextSlide) {
                 console.log('handleBeforeChange', event, slick, currentSlide, nextSlide);
             },
             next () {
@@ -113,16 +113,17 @@
     .slider-for {
         a {
             outline: none;
-            display: flex;
+            display: flex !important;
             align-items: center;
             justify-content: center;
             width: 100%;
             height: calc(100vh - 310px);
             img {
-                height: 100%;
+                max-width: 93%;
+                max-height: 100%;
                 margin: auto;
                 border-radius: 10px;
-                box-shadow: 0 0 30px rgba($dark, .2);
+                box-shadow: 0 0 30px rgba($dark, .3);
             }
         }
     }
@@ -137,7 +138,7 @@
         a {
             opacity: .6;
             outline: none;
-            display: flex;
+            display: flex !important;
             align-items: center;
             justify-content: center;
             width: 100%;
@@ -147,10 +148,11 @@
                 opacity: 1;
             }
 
-            img {
-                height: 100%;
-                margin: auto;
+            > div {
                 border-radius: 10px;
+                width: 90%;
+                height: 100%;
+                background-size: cover;
             }
         }
     }

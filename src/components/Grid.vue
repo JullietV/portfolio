@@ -40,7 +40,7 @@
                             <ul class="techs">
                                 <li v-for="tech in activeItem.item.tech">{{tech}}</li>
                             </ul>
-                            <div class="visit-site">
+                            <div class="visit-site" v-if="activeItem.item.link">
                                 Visit Site<i class="flaticon-share"></i>
                             </div>
                         </div>
@@ -63,131 +63,202 @@
                 allProjects: [
                     {
                         id: 1,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
+                        title: 'Project To Team',
+                        description: 'Aplicación Web para el manejo y la supervisión de grupos de trabajo, con múltiples' +
+                            ' funcionalidades. Tales como: Organización y distribución de proyectos, manejo de usuarios, ' +
+                            'manejo de grupos, creación y edición de actas, chat, entre otros. El desarrollo fue dividido ' +
+                            'por etapas y ha ido escalando a medida que pasa el tiempo.',
                         timeframe: new Date(),
-                        tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
+                        tech: ['HTML', 'CSS', 'JS', 'VUEJS', 'UX'],
+                        link: 'http://projectoteam.com/',
                         slider: [
                             {
-                                src: 'https://image.freepik.com/free-vector/moderm-landing-page-template_52683-474.jpg',
+                                src: '/img/p2team/1.PNG',
                                 title: 'rocket'
                             },
                             {
-                                src: 'https://image.freepik.com/free-vector/modern-landing-page-template-in-flat-design_23-2147919385.jpg',
+                                src: '/img/p2team/2.PNG',
                                 title: 'rocket'
                             },
                             {
-                                src: 'https://image.freepik.com/free-vector/web-design-concept-with-flat-design_23-2147850223.jpg',
+                                src: '/img/p2team/3.PNG',
                                 title: 'rocket'
                             },
                             {
-                                src: 'https://image.freepik.com/free-vector/web-design-agency-landing-page_52683-868.jpg',
+                                src: '/img/p2team/4.PNG',
                                 title: 'rocket'
                             },
                             {
-                                src: 'https://image.freepik.com/free-vector/online-shopping-landing-page_52683-870.jpg',
+                                src: '/img/p2team/5.PNG',
                                 title: 'rocket'
                             },
                             {
-                                src: 'https://image.freepik.com/free-vector/modern-web-design-landing-page-concept_23-2147873134.jpg',
+                                src: '/img/p2team/6.PNG',
                                 title: 'rocket'
                             },
                         ],
-                        thumbnail: 'https://image.freepik.com/free-vector/modern-landing-page-template-in-flat-design_23-2147919385.jpg'
+                        thumbnail: '/img/p2team/thumb.jpg'
                     },
                     {
                         id: 2,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
-                        timeframe: new Date(),
-                        tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
+                        title: 'AdsLab',
+                        description: 'Aplicación Web para la automatización de Anuncios en diversos sitios de internet. Incluye estadísticas, ' +
+                            'creación y manejo de anuncios.',
+                        timeframe: 'Agosto 2018 - Actualidad',
+                        tech: ['HTML', 'CSS', 'JS', 'VUEJS', 'UX'],
+                        link: 'https://adslab.io/',
                         slider: [
                             {
-                                src: 'https://image.freepik.com/free-vector/web-design-concept-with-flat-design_23-2147850223.jpg',
+                                src: `/img/adslab/1.png`,
                                 title: 'rocket'
                             },
                             {
-                                src: 'https://image.freepik.com/free-vector/modern-landing-page-template-in-flat-design_23-2147919385.jpg',
+                                src: '/img/adslab/5.png',
                                 title: 'rocket'
                             },
                             {
-                                src: 'https://image.freepik.com/free-vector/online-shopping-landing-page_52683-870.jpg',
+                                src: '/img/adslab/3.png',
                                 title: 'rocket'
                             },
                             {
-                                src: 'https://image.freepik.com/free-vector/modern-web-design-landing-page-concept_23-2147873134.jpg',
+                                src: '/img/adslab/4.png',
                                 title: 'rocket'
                             },
                             {
-                                src: 'https://image.freepik.com/free-vector/moderm-landing-page-template_52683-474.jpg',
+                                src: '/img/adslab/5.png',
+                                title: 'rocket'
+                            },
+                            {
+                                src: '/img/adslab/6.png',
+                                title: 'rocket'
+                            },
+                            {
+                                src: '/img/adslab/7.png',
+                                title: 'rocket'
+                            },
+                            {
+                                src: '/img/adslab/8.png',
+                                title: 'rocket'
+                            },
+                            {
+                                src: '/img/adslab/10.png',
                                 title: 'rocket'
                             },
                         ],
-                        thumbnail: 'https://picsum.photos/400/320/?random'
+                        thumbnail: `/img/adslab/thumb.jpg`
                     },
                     {
                         id: 3,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
-                        timeframe: new Date(),
-                        tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
+                        title: 'CargoParts',
+                        description: 'Tienda online de partes y accesorios automovilísticos',
+                        timeframe: 'Agosto 2018 - Actualidad',
+                        tech: ['HTML', 'CSS', 'JS', 'VUEJS', 'NUXT'],
+                        link: null,
                         slider: [
                             {
-                                src: 'https://image.freepik.com/free-vector/web-design-concept-with-flat-design_23-2147850223.jpg',
+                                src: '/img/cargo/CP-2.jpg',
                                 title: 'rocket'
                             },
                             {
-                                src: 'https://image.freepik.com/free-vector/modern-landing-page-template-in-flat-design_23-2147919385.jpg',
+                                src: '/img/cargo/CP-4.jpg',
                                 title: 'rocket'
                             },
                             {
-                                src: 'https://image.freepik.com/free-vector/online-shopping-landing-page_52683-870.jpg',
+                                src: '/img/cargo/CP-6.jpg',
                                 title: 'rocket'
                             },
                             {
-                                src: 'https://image.freepik.com/free-vector/modern-web-design-landing-page-concept_23-2147873134.jpg',
+                                src: '/img/cargo/CP-7.jpg',
                                 title: 'rocket'
                             },
                             {
-                                src: 'https://image.freepik.com/free-vector/moderm-landing-page-template_52683-474.jpg',
+                                src: '/img/cargo/CP-9.jpg',
                                 title: 'rocket'
-                            },],
-                        thumbnail: 'https://picsum.photos/400/350/?random'
+                            },
+                            {
+                                src: '/img/cargo/CP-12.jpg',
+                                title: 'rocket'
+                            },
+                        ],
+                        thumbnail: '/img/cargo/thumb.jpg',
                     },
                     {
                         id: 4,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
-                        timeframe: new Date(),
+                        title: 'Amoblando',
+                        description: 'Rediseño de una tienda online basada en AngularJS.',
+                        timeframe: 'Agosto 2018 - Actualidad',
                         tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
-                        slider: [],
-                        thumbnail: 'https://picsum.photos/200/300/?random'
+                        link: 'https://www.amoblando.com.ar/#!/',
+                        slider: [
+                            {
+                                src: '/img/amoblando/0.jpg',
+                                title: 'rocket'
+                            },
+                            {
+                                src: '/img/amoblando/1.png',
+                                title: 'rocket'
+                            },
+                            {
+                                src: '/img/amoblando/2.png',
+                                title: 'rocket'
+                            },
+                            {
+                                src: '/img/amoblando/3.png',
+                                title: 'rocket'
+                            },
+                            {
+                                src: '/img/amoblando/4.png',
+                                title: 'rocket'
+                            },
+                            {
+                                src: '/img/amoblando/5.png',
+                                title: 'rocket'
+                            },
+                            {
+                                src: '/img/amoblando/6.png',
+                                title: 'rocket'
+                            },
+                        ],
+                        thumbnail: '/img/amoblando/thumb.jpg'
                     },
                     {
                         id: 5,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
-                        timeframe: new Date(),
-                        tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
-                        slider: [{
-                            src: 'https://image.freepik.com/free-vector/moderm-landing-page-template_52683-474.jpg',
-                            title: 'rocket'
-                        },
+                        title: 'CDEM',
+                        description: 'Aplicación web empleada para realizar tests de medicina en forma de práctica, ' +
+                            'utilizando la gamificación como estrategia. Incluye estadísticas, contadores de juego,' +
+                            ' medallas, badges, notas, etc. Todo lo que necesitas para estudiar de una manera más atractiva.',
+                        timeframe: 'Agosto 2018 - Actualidad',
+                        tech: ['HTML', 'CSS', 'JS', 'VUEJS', 'NUXT'],
+                        link: null,
+                        slider: [
+                            {
+                                src: '/img/cdem/01.jpg',
+                                title: 'rocket'
+                            },
+                            {
+                                src: '/img/cdem/2.jpg',
+                                title: 'rocket'
+                            },
+                            {
+                                src:  '/img/cdem/3.jpg',
+                                title: 'rocket'
+                            },
+                        ],
+                        thumbnail:  '/img/cdem/thumb.jpg'
+                    },
+                    {
+                        id: 6,
+                        title: 'Firesoft',
+                        description: 'Página web empresarial. Incluye Blog, buscador, portafolio, contactos y gestión de ' +
+                            'presupuestos.',
+                        timeframe: 'Enero 2018',
+                        tech: ['HTML', 'CSS', 'JS', 'VUEJS', 'NUXT'],
+                        link: 'https://www.firesoft.org/',
+                        slider: [
+                            {
+                                src: 'https://image.freepik.com/free-vector/moderm-landing-page-template_52683-474.jpg',
+                                title: 'rocket'
+                            },
                             {
                                 src: 'https://image.freepik.com/free-vector/modern-landing-page-template-in-flat-design_23-2147919385.jpg',
                                 title: 'rocket'
@@ -207,188 +278,9 @@
                             {
                                 src: 'https://image.freepik.com/free-vector/modern-web-design-landing-page-concept_23-2147873134.jpg',
                                 title: 'rocket'
-                            }],
-                        thumbnail: 'https://picsum.photos/250/300/?random'
-                    },
-                    {
-                        id: 6,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
-                        timeframe: new Date(),
-                        tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
-                        slider: [],
-                        thumbnail: 'https://picsum.photos/400/330/?random'
-                    },
-                    {
-                        id: 7,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
-                        timeframe: new Date(),
-                        tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
-                        slider: [],
-                        thumbnail: 'https://picsum.photos/400/200/?random'
-                    },
-                    {
-                        id: 8,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
-                        timeframe: new Date(),
-                        tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
-                        slider: [],
-                        thumbnail: 'https://picsum.photos/400/325/?random'
-                    },
-                    {
-                        id: 9,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
-                        timeframe: new Date(),
-                        tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
-                        slider: [],
-                        thumbnail: 'https://picsum.photos/400/305/?random'
-                    },
-                    {
-                        id: 10,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
-                        timeframe: new Date(),
-                        tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
-                        slider: [],
-                        thumbnail: 'https://picsum.photos/330/300/?random'
-                    },
-                    {
-                        id: 11,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
-                        timeframe: new Date(),
-                        tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
-                        slider: [],
-                        thumbnail: 'https://picsum.photos/440/300/?random'
-                    },
-                    {
-                        id: 12,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
-                        timeframe: new Date(),
-                        tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
-                        slider: [],
-                        thumbnail: 'https://picsum.photos/405/300/?random'
-                    },
-                    {
-                        id: 13,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
-                        timeframe: new Date(),
-                        tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
-                        slider: [],
-                        thumbnail: 'https://picsum.photos/350/300/?random'
-                    },
-                    {
-                        id: 14,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
-                        timeframe: new Date(),
-                        tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
-                        slider: [],
-                        thumbnail: 'https://picsum.photos/400/328/?random'
-                    },
-                    {
-                        id: 15,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
-                        timeframe: new Date(),
-                        tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
-                        slider: [],
-                        thumbnail: 'https://picsum.photos/415/300/?random'
-                    },
-                    {
-                        id: 16,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
-                        timeframe: new Date(),
-                        tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
-                        slider: [],
-                        thumbnail: 'https://picsum.photos/220/300/?random'
-                    },
-                    {
-                        id: 17,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
-                        timeframe: new Date(),
-                        tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
-                        slider: [],
-                        thumbnail: 'https://picsum.photos/409/325/?random'
-                    },
-                    {
-                        id: 18,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
-                        timeframe: new Date(),
-                        tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
-                        slider: [],
-                        thumbnail: 'https://picsum.photos/400/380/?random'
-                    },
-                    {
-                        id: 19,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
-                        timeframe: new Date(),
-                        tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
-                        slider: [],
-                        thumbnail: 'https://picsum.photos/390/300/?random'
-                    },
-                    {
-                        id: 20,
-                        title: 'Nombre del Proyecto',
-                        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque earum, eius?' +
-                            ' A accusamus adipisci aliquid amet eius, est eum exercitationem explicabo facere nisi' +
-                            ' omnis placeat quaerat, rem sequi similique voluptas?',
-                        timeframe: new Date(),
-                        tech: ['HTML', 'CSS', 'JS'],
-                        link: 'http://google.co.ve',
-                        slider: [],
-                        thumbnail: 'https://picsum.photos/307/300/?random'
+                            },
+                        ],
+                        thumbnail: '/img/firesoft/thumb.jpg'
                     },
                 ],
                 projects: [],
@@ -404,7 +296,7 @@
             }, 1500)
         },
         beforeDestroy () {
-          clearInterval(this.interval)
+            clearInterval(this.interval)
         },
         components: {
             Slider
@@ -477,14 +369,15 @@
     .grid {
         position: relative;
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-auto-rows: minmax(33.33vh, auto);
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(50vh, auto);
 
         .col {
             cursor: pointer;
             position: relative;
             background-size: cover;
             overflow: hidden;
+            background-position: center;
             // background-image: url('https://picsum.photos/400/300/?random');
 
             .darker-image {
@@ -666,7 +559,8 @@
                 }
 
                 .gallery {
-                    padding: 15px;
+                    padding: 15px 50px;
+                    // padding: 15px;
                     box-sizing: border-box;
                 }
 
