@@ -68,7 +68,7 @@
                             ' funcionalidades. Tales como: Organización y distribución de proyectos, manejo de usuarios, ' +
                             'manejo de grupos, creación y edición de actas, chat, entre otros. El desarrollo fue dividido ' +
                             'por etapas y ha ido escalando a medida que pasa el tiempo.',
-                        timeframe: new Date(),
+                        timeframe: 'Un año, dividiendo el proyecto en diversas etapas.',
                         tech: ['HTML', 'CSS', 'JS', 'VUEJS', 'UX'],
                         link: 'http://projectoteam.com/',
                         slider: [
@@ -97,7 +97,7 @@
                                 title: 'rocket'
                             },
                         ],
-                        thumbnail: '/img/p2team/thumb.jpg'
+                        thumbnail: '/img/p2team/thumb1.jpg'
                     },
                     {
                         id: 2,
@@ -145,13 +145,13 @@
                                 title: 'rocket'
                             },
                         ],
-                        thumbnail: `/img/adslab/thumb.jpg`
+                        thumbnail: `/img/adslab/thumb1.jpg`
                     },
                     {
                         id: 3,
                         title: 'CargoParts',
                         description: 'Tienda online de partes y accesorios automovilísticos',
-                        timeframe: 'Agosto 2018 - Actualidad',
+                        timeframe: 'Enero 2017 - Abril 2017',
                         tech: ['HTML', 'CSS', 'JS', 'VUEJS', 'NUXT'],
                         link: null,
                         slider: [
@@ -180,13 +180,14 @@
                                 title: 'rocket'
                             },
                         ],
-                        thumbnail: '/img/cargo/thumb.jpg',
+                        thumbnail: '/img/cargo/thumb1.jpg',
                     },
                     {
                         id: 4,
                         title: 'Amoblando',
                         description: 'Rediseño de una tienda online basada en AngularJS.',
-                        timeframe: 'Agosto 2018 - Actualidad',
+                        timeframe: 'Abril 2017 - Marzo 2018 | El proyecto fue dividido en varias etapas en las que, ' +
+                            'progresivamente se fueron añadiendo nuevas características',
                         tech: ['HTML', 'CSS', 'JS'],
                         link: 'https://www.amoblando.com.ar/#!/',
                         slider: [
@@ -219,7 +220,7 @@
                                 title: 'rocket'
                             },
                         ],
-                        thumbnail: '/img/amoblando/thumb.jpg'
+                        thumbnail: '/img/amoblando/thumb1.jpg'
                     },
                     {
                         id: 5,
@@ -240,11 +241,11 @@
                                 title: 'rocket'
                             },
                             {
-                                src:  '/img/cdem/3.jpg',
+                                src: '/img/cdem/3.jpg',
                                 title: 'rocket'
                             },
                         ],
-                        thumbnail:  '/img/cdem/thumb.jpg'
+                        thumbnail: '/img/cdem/thumb1.jpg'
                     },
                     {
                         id: 6,
@@ -256,31 +257,39 @@
                         link: 'https://www.firesoft.org/',
                         slider: [
                             {
-                                src: 'https://image.freepik.com/free-vector/moderm-landing-page-template_52683-474.jpg',
+                                src: '/img/firesoft/1.png',
                                 title: 'rocket'
                             },
                             {
-                                src: 'https://image.freepik.com/free-vector/modern-landing-page-template-in-flat-design_23-2147919385.jpg',
+                                src: '/img/firesoft/2.png',
                                 title: 'rocket'
                             },
                             {
-                                src: 'https://image.freepik.com/free-vector/web-design-concept-with-flat-design_23-2147850223.jpg',
+                                src: '/img/firesoft/3.png',
                                 title: 'rocket'
                             },
                             {
-                                src: 'https://image.freepik.com/free-vector/web-design-agency-landing-page_52683-868.jpg',
+                                src: '/img/firesoft/4.png',
                                 title: 'rocket'
                             },
                             {
-                                src: 'https://image.freepik.com/free-vector/online-shopping-landing-page_52683-870.jpg',
+                                src: '/img/firesoft/5.png',
                                 title: 'rocket'
                             },
                             {
-                                src: 'https://image.freepik.com/free-vector/modern-web-design-landing-page-concept_23-2147873134.jpg',
+                                src: '/img/firesoft/6.png',
+                                title: 'rocket'
+                            },
+                            {
+                                src: '/img/firesoft/7.png',
+                                title: 'rocket'
+                            },
+                            {
+                                src: '/img/firesoft/8.png',
                                 title: 'rocket'
                             },
                         ],
-                        thumbnail: '/img/firesoft/thumb.jpg'
+                        thumbnail: '/img/firesoft/thumb1.jpg'
                     },
                 ],
                 projects: [],
