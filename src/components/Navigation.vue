@@ -6,13 +6,13 @@
         <div class="nav-links">
             <ul>
                 <li v-if="!showRoute('about')">
-                    <router-link to="/about">About Me</router-link>
+                    <router-link to="/about">Acerca de Mi</router-link>
                 </li>
                 <li v-if="!showRoute('portfolio')">
-                    <router-link to="/portfolio">Portfolio</router-link>
+                    <router-link to="/portfolio">Portafolio</router-link>
                 </li>
                 <li v-if="!showRoute('contact')">
-                    <router-link to="/contact">Contact Me</router-link>
+                    <router-link to="/contact">¡Contactame!</router-link>
                 </li>
             </ul>
         </div>
@@ -49,15 +49,28 @@
             h1 {
                 margin: 10px 0;
             }
+
+            @media screen and (max-width: 500px) {
+                font-size: 1.25rem;
+            }
+
+            @media screen and (max-width: 800px) {
+                font-size: 2rem;
+            }
         }
 
         .nav-links {
             ul {
                 display: flex;
+                vertical-align: middle;
 
                 li {
                     font-size: 1.2rem;
                     margin-right: 10px;
+
+                    @media screen and (max-width:500px) {
+                        font-size: 1rem;
+                    }
 
                     &:after {
                         content: '•';
@@ -111,6 +124,18 @@
                 &:hover {
                     color: darken($darker-blue, 20%);
                 }
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-wrap: wrap;
+
+            .brand h1 {
+                margin-bottom: 0;
+            }
+
+            .brand, .nav-links {
+                width: 100%;
             }
         }
     }

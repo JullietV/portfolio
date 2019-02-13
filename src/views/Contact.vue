@@ -107,7 +107,7 @@
         background-color: rgba($blue, .7);
         padding: 30px;
         width: 500px;
-        max-width: 90%;
+        max-width: calc(90% - 70px);
         flex-wrap: wrap;
         display: flex;
         align-items: center;
@@ -133,6 +133,10 @@
         resize: none;
         color: $purple;
         font-family: 'Nexa Light', sans-serif;
+
+        @media screen and (max-width: 500px) {
+            width: auto;
+        }
     }
 
     input:focus, textarea:focus {

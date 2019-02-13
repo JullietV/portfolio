@@ -5,15 +5,18 @@
          name="slide-left">
             <router-view/>
         </transition>
+        <site-footer></site-footer>
     </div>
 </template>
 
 <script>
     import Navigation from './components/Navigation'
+    import SiteFooter from './components/Footer'
 
     export default {
         components: {
-            Navigation
+            Navigation,
+          SiteFooter
         }
     }
 </script>

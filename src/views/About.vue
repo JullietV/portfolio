@@ -1,6 +1,8 @@
 <template>
     <div class="about-wrapper">
         <div class="about-page">
+            <div class="about-img">
+            </div>
             <div class="about-text">
                 <h3>Soy una desarrolladora Front-End entusiasta por el diseño gráfico y diseño UX. Me especializo
                 en el desarrollo de aplicaciones web en VueJS. Soy creativa, responsable y reisiliente. <b>¡Carpe Diem!</b></h3>
@@ -123,9 +125,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="about-img">
-                <div class="img"></div>
-            </div>
+
         </div>
     </div>
 </template>
@@ -155,19 +155,24 @@
     }
 
     .about-page {
-        max-width: 90%;
-        height: 100vh;
-        margin: 0 5%;
         display: flex;
         flex-wrap: wrap;
+        height: 100vh;
+
         & > div {
+            max-height: 100%;
             width: 50%;
             box-sizing: border-box;
             padding: 90px 15px 15px 0;
+            overflow: auto;
         }
 
         .about-text {
+            padding-right: 5%;
+            max-height: 100%;
             text-align: left;
+            padding-bottom: 3rem;
+
 
             h2 {
                 font-family: 'Nexa Bold', sans-serif;
@@ -319,18 +324,54 @@
         }
 
         .about-img {
+            padding-left: 6%;
+            max-height: 98vh;
             padding-bottom: 0;
             text-align: center;
             display: flex;
             align-items: flex-end;
+            background-image: url('../../public/img/me/yo-landa.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
 
             .img {
+                position: fixed;
+                left: calc(50% + 225px);
                 margin: 0 auto;
                 height: 600px;
                 width: 450px;
                 background-image: url('../../public/img/me/carousel.jpg');
                 background-size: auto 100%;
                 animation: stepBy 20s steps(3) infinite alternate;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            padding-top: 7rem;
+            display: block;
+            height: 100vh;
+            & > div {
+                padding: 0;
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .about-text {
+                max-height: none;
+
+                h2, ul {
+                    display: none;
+                }
+
+                h3 {
+                    text-align: center;
+                }
+            }
+
+            .about-img {
+
+                height: 400px;
             }
         }
     }
