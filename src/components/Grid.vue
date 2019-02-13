@@ -1,6 +1,6 @@
 <template>
     <div :class="['grid', {'clickable': active}]">
-        <div class="cover"></div>
+        <div class="cover" @click="managePortfolioPage"></div>
         <div v-for="(p, index) in shownProjects" @click="handleClick(p)"
              :style="`background-image: url(${p.thumbnail})`" class="col">
             <div class="darker-image"></div>
@@ -41,7 +41,7 @@
                                 <li v-for="tech in activeItem.item.tech">{{tech}}</li>
                             </ul>
                             <div class="visit-site" v-if="activeItem.item.link">
-                                Visit Site<i class="flaticon-share"></i>
+                                Visitar Sitio<i class="flaticon-share"></i>
                             </div>
                         </div>
                     </div>
@@ -361,6 +361,9 @@
                 this.shownProjects = p.slice(0, 15)
                 /* console.log(p)
                 console.log(this.shownProjects) */
+            },
+            managePortfolioPage () {
+              this.$router.push({name: 'portfolio'})
             }
         },
         props: {
@@ -470,6 +473,11 @@
             bottom: 0;
             z-index: 50;
         }
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: minmax(33.3vh, auto);
+        }
     }
 
     .counter {
@@ -499,6 +507,10 @@
         width: 90%;
         left: 5%;
         height: calc(100vh - 150px);
+
+        @media screen and (max-width:1024px) {
+            width: 83%;
+        }
 
         .card {
             display: flex;
@@ -627,7 +639,16 @@
                         }
                     }
                 }
+
+                @media screen and (max-width: 768px) {
+                    > div {
+                        width: 100%;
+                        height: 50%;
+                    }
+                }
             }
+
+
         }
     }
 

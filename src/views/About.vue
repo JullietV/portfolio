@@ -4,7 +4,7 @@
             <div class="about-text">
                 <h3>Soy una desarrolladora Front-End entusiasta por el diseño gráfico y diseño UX. Me especializo
                 en el desarrollo de aplicaciones web en VueJS. Soy creativa, responsable y reisiliente. <b>¡Carpe Diem!</b></h3>
-                <h2>Skills</h2>
+                <h2>Habilidades</h2>
                 <ul class="skills-list">
                     <li>
                         <div class="skill-name">
@@ -55,14 +55,73 @@
                         </div>
                     </li>
                 </ul>
-                <h2>Experience</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores praesentium quaerat quisquam vel
-                    voluptatibus? Aut earum eveniet excepturi, officia provident quibusdam veritatis? Asperiores
-                    consequuntur doloribus nihil tempora vel? Asperiores, voluptates!</p>
-                <h2>Certifieds</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A expedita incidunt ipsam itaque laborum
-                    odit quia quibusdam soluta sunt tenetur. Blanditiis corporis deserunt distinctio dolor laborum omnis
-                    quae voluptatibus voluptatum.</p>
+                <h2>Experiencia</h2>
+                <ul class="experience-list">
+                    <li>
+                        <div class="experience-head">
+                            <div class="date"><span>2014</span><strong>Act.</strong></div>
+                            <div class="name">
+                                <h3>Freelancer</h3>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="experience-head">
+                            <div class="date"><span>2014</span><strong>Act.</strong></div>
+                            <div class="name">
+                                <h3>Desarrolladora Front</h3>
+                                <h4>Firesoft International</h4>
+                            </div>
+                        </div>
+                        <ul class="experience-content">
+                            <li>
+                                Supervisión de diversos equipos de trabajo.
+                            </li>
+                            <li>Supervisión del departamento de Diseño.</li>
+                            <li>Desarrollo web responsivo.</li>
+                            <li>Desarrollo de Aplicaciones Web con VueJS y NUXT.</li>
+                            <li>Conexión con APIs.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h2>Certificados</h2>
+                <ul class="certifieds">
+                    <li>
+                        <div class="date">2016</div>
+                        <div class="text">
+                            <h3>Curso de Programación Básica</h3>
+                            <h4>Platzi</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="date">2016</div>
+                        <div class="text">
+                            <h3>Curso de Marca Personal</h3>
+                            <h4>Platzi</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="date">2016</div>
+                        <div class="text">
+                            <h3>Curso de desarrollo Web Online</h3>
+                            <h4>Platzi</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="date">2016</div>
+                        <div class="text">
+                            <h3>Curso de Responsive Design</h3>
+                            <h4>Platzi</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="date">2016</div>
+                        <div class="text">
+                            <h3>Curso de PostCSS</h3>
+                            <h4>Platzi</h4>
+                        </div>
+                    </li>
+                </ul>
             </div>
             <div class="about-img">
                 <div class="img"></div>
@@ -167,11 +226,103 @@
                 }
 
             }
+
+            .experience-list {
+                > li {
+                    margin-bottom: 1rem;
+                }
+
+                .experience-head {
+                    display: flex;
+                    align-items: center;
+
+                    h3, h4 {
+                        margin: 0;
+                    }
+
+                    h3 {
+                        font-family: 'Nexa Bold', sans-serif;
+                    }
+
+                    h4 {
+                        color: $purple;
+
+                    }
+                }
+
+                .experience-content {
+                    padding-left: 60px;
+
+                    li {
+                        &:before {
+                            content: '- ';
+                        }
+                    }
+                }
+
+                .date {
+                    background-color: $purple;
+                    color: $green;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    position: relative;
+                    margin-right: 15px;
+                    font-family: 'Nexa Bold', sans-serif;
+
+
+                    span {
+                        display: block;
+                        top: 15px;
+                        left: 6px;
+                        position: absolute;
+                        font-size: .8rem;
+                        opacity: .8;
+                    }
+
+                    strong {
+                        font-size: 1.3rem;
+                        display: block;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        text-shadow: 1px 1px 1px rgba(#000, .8);
+                    }
+                }
+            }
+
+            .certifieds {
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1rem;
+
+                    h3, h4 {
+                        margin: 0;
+                    }
+                }
+                .date {
+                    width: 40px;
+                    height: 40px;
+                    background-color: $purple;
+                    color: $green;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 15px;
+                    font-size: .8rem;
+                    font-family: 'Nexa Bold', sans-serif;
+                }
+            }
         }
 
         .about-img {
             padding-bottom: 0;
             text-align: center;
+            display: flex;
+            align-items: flex-end;
 
             .img {
                 margin: 0 auto;

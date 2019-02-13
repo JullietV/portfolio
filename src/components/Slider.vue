@@ -50,7 +50,15 @@
                     dots: false,
                     centerMode: true,
                     focusOnSelect: true,
-                    arrows: false
+                    arrows: false,
+                    responsive: [
+                        {
+                            breakpoint: 600,
+                            settings: {
+                                slidesToShow: 1
+                            }
+                        },
+                    ]
                 }
             };
         },
@@ -124,6 +132,10 @@
                 margin: auto;
                 border-radius: 10px;
                 box-shadow: 0 0 30px rgba($dark, .3);
+            }
+
+            @media screen and (max-width: 768px) {
+                height: calc(50vh - 200px);
             }
         }
     }

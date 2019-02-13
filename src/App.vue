@@ -1,7 +1,10 @@
 <template>
     <div id="app">
         <navigation></navigation>
-        <router-view/>
+        <transition
+         name="slide-left">
+            <router-view/>
+        </transition>
     </div>
 </template>
 
@@ -58,4 +61,27 @@
     ul {
         list-style: none;
     }
+
+    .slide-left-enter-active,
+    .slide-left-leave-active,
+    .slide-right-enter-active,
+    .slide-right-leave-active {
+      transition-duration: 0.5s;
+      transition-property: height, opacity, transform;
+      transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+      overflow: hidden;
+    }
+
+    .slide-left-enter,
+    .slide-right-leave-active {
+      opacity: 0;
+      transform: translate(2em, 0);
+    }
+
+    .slide-left-leave-active,
+    .slide-right-enter {
+      opacity: 0;
+      transform: translate(-2em, 0);
+    }
+
 </style>
