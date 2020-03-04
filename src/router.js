@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Auth from './views/Auth.vue'
+import Reject from './views/Reject.vue'
+import Clean from './views/Clean.vue'
 
 Vue.use(Router)
 
@@ -33,6 +36,21 @@ export default new Router({
             path: '/contact',
             name: 'contact',
             component: () => import(/* webpackChunkName: "about" */ './views/Contact.vue')
-        }
+        },
+        {
+            path: '/auth',
+            name: 'auth',
+            component: Auth
+        },
+        {
+            path: '/auth/cancel',
+            name: 'home',
+            component: Reject
+        },
+        {
+            path: '/auth/clear',
+            name: 'home',
+            component: Clean
+        },
     ]
 })
